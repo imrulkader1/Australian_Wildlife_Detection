@@ -69,7 +69,7 @@ def transmit_to_server(file_path):
 #---------------------------------------------
 detection_times = {}
 last_logged = {}
-DETECTION_THRESHOLD = 3  # seconds continous before logging
+DETECTION_THRESHOLD = 0  # seconds continous before logging
 COOLDOWN_PERIOD = 5      # seconds after logging
 
 #---------------------------------------------
