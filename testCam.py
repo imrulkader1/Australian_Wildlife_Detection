@@ -24,7 +24,6 @@ def read_location(filename="pi_location.txt"):
         lat, lon = f.read().strip().split(",")
         return float(lat), float(lon)
 
-# Read location once initially (change to inside loop ONLY if device moves)
 DEVICE_LAT, DEVICE_LON = read_location()
 DEVICE_LOCATION = {"latitude": DEVICE_LAT, "longitude": DEVICE_LON}
 
@@ -44,7 +43,7 @@ if not os.path.exists(LOG_PATH):
 #---------------------------------------------
 def log_detection(class_name, confidence, bbox, location):
     now = datetime.utcnow().isoformat()
-    conf_float = float(confidence)  # Ensure confidence is a Python float
+    conf_float = float(confidence)
     row = [
         now, class_name, f"{conf_float:.2f}",
         bbox[0], bbox[1], bbox[2], bbox[3],
@@ -70,7 +69,7 @@ def transmit_to_server(file_path):
 #---------------------------------------------
 detection_times = {}
 last_logged = {}
-DETECTION_THRESHOLD = 3  # seconds before logging
+DETECTION_THRESHOLD = 3  # seconds continous before logging
 COOLDOWN_PERIOD = 5      # seconds after logging
 
 #---------------------------------------------
@@ -78,10 +77,8 @@ COOLDOWN_PERIOD = 5      # seconds after logging
 #---------------------------------------------
 print("Starting real-time detection...")
 while True:
-    # Re-read location continuously
     DEVICE_LAT, DEVICE_LON = read_location()
     DEVICE_LOCATION = {"latitude": DEVICE_LAT, "longitude": DEVICE_LON}
-
     now_ts = time.time()
     results = model.predict(
         source=0,
@@ -93,7 +90,7 @@ while True:
     )
     for r in results:
         for box in r.boxes:
-            conf_float = float(box.conf)  # Convert tensor to float
+            conf_float = float(box.conf)
             if conf_float > 0.6:
                 class_id = int(box.cls)
                 class_name = model.names[class_id]
