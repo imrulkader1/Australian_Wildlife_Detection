@@ -131,11 +131,13 @@ Detection logs auto-upload to GitHub when Wi-Fi is available; see `check_wifi()`
 
 ## References
 
-- Zhang, Q. & Amed, K. (2025). *Australia Animal Species Image Dataset*. Kaggle. DOI: 10.34740/KAGGLE/DSV/12990738  
-- Ultralytics YOLOv8 Documentation  
-- Raspberry Pi Foundation – Camera Interface Guide  
-- OpenCV Python Documentation  
-- PyGithub documentation  
+- Zhang, Q. & Amed, K. (2025). *Australia Animal Species Image Dataset*. Kaggle.  
+  DOI: [10.34740/KAGGLE/DSV/12990738](https://doi.org/10.34740/KAGGLE/DSV/12990738)
+- [Ultralytics YOLOv8 Documentation](https://docs.ultralytics.com/)
+- [Raspberry Pi Camera Documentation](https://www.raspberrypi.com/documentation/accessories/camera.html)
+- [OpenCV Python Documentation](https://docs.opencv.org/4.x/index.html)
+- [PyGithub Documentation](https://github.com/PyGithub/PyGithub)
+
 
 ---
 
