@@ -80,7 +80,7 @@ yolo detect train data=data.yaml model=yolov8n.pt epochs=100 imgsz=640
  ```
  FILTER_CLASSES = None  # Detect all species
  # Or example subset:
- FILTER_CLASSES =   # Use class indices from your model[1][2]
+ FILTER_CLASSES =   # Use class indices from model[1][2]
  ```
 
 2. Place `best.pt` (YOLO weights) in your working directory.
