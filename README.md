@@ -1,6 +1,6 @@
 # Australian Wildlife Detection – Edge AI Platform
 
-A **autonomous wildlife monitoring system** for Australian national parks, powered by Edge Artificial Intelligence. Real-time animal detection and identification on a **Raspberry Pi 4**, bringing advanced machine learning directly to the wild.
+An **autonomous wildlife monitoring system** for Australian national parks, powered by Edge Artificial Intelligence. Real-time animal detection and identification on a **Raspberry Pi 4**, bringing advanced machine learning directly to the wild.
 
 The solution supports conservation and ecological research by automating data collection, reducing manual fieldwork, and working even without continuous internet connectivity.
 
